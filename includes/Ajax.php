@@ -55,7 +55,7 @@ class Ajax {
             $results .= '</ul>';
             wp_send_json_success($results);
         }
-        wp_send_json_success('نتیجه ای یافت نشد');
+        wp_send_json_success(__("Nothing found !", "wp-su"));
     }
 
 }

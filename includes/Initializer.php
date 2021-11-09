@@ -34,7 +34,7 @@ class Initializer {
             }
         </style>
         <div id="ajax-search-results-wrapper" style="display: none;"></div>
-        <div id="ajax-search-results-loading" style="color: red;font-weight: bold;display: none;" >لطفا منتظر بمانید ...</div>
+        <div id="ajax-search-results-loading" style="color: red;font-weight: bold;display: none;" ><?php echo __( "Please Wait ...", "siaeb-suggestion" ); ?></div>
         <script type="text/javascript">
             jQuery(document).ready(function ($) {
                 var searchLoading = $('#ajax-search-results-loading');
@@ -80,7 +80,7 @@ class Initializer {
                     allowSubmit: false,
                     captureLength: 2
                 }
-            
+
                 $("[name=post_title]").typeWatch( options );
             });
         </script>

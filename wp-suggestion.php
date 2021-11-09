@@ -1,11 +1,12 @@
 <?php
 /**
- * Plugin Name: پیشنهاد دهنده
+ * Plugin Name: WP Suggestion
  * Plugin URI: http://www.siaeb.com
  * Version: 1.0
- * Description: این افزونه در هنگام ایجاد مطلب جدید یا دسته بندی موارد مشاهده را به شما نمایش می دهد
- * Author: سیاوش ابراهیمی
+ * Description: This plugin show similar items when creating new post, category, tag
+ * Author: Siavash Ebrahimi
  * Author URI: http://www.siaeb.com
+ * Text Domain: siaeb-suggestion
  */
 
 use siaeb\suggestion\includes\Ajax;

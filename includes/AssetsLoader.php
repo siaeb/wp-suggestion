@@ -20,6 +20,7 @@ class AssetsLoader {
 	 */
 	function loadAdminAssets( $hook ) {
 		$scripts_version = "1.0";
+
 		if ( ! in_array( $hook, [ 'edit-tags.php', 'post-new.php' ] ) ) {
 			return;
 		}

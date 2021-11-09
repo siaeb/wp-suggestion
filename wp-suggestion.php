@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: پیشنهاد دهنده ی عنوان
+ * Plugin Name: پیشنهاد دهنده
  * Plugin URI: http://www.siaeb.com
  * Version: 1.0
  * Description: این افزونه در هنگام ایجاد مطلب جدید یا دسته بندی موارد مشاهده را به شما نمایش می دهد

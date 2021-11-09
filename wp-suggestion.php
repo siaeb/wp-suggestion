@@ -36,11 +36,12 @@ if ( ! class_exists( 'SIAEB_Suggestion' ) ) :
 		 */
 		public $util;
 
-
 		public static function instance() {
 			if ( is_null( self::$instance instanceof SIAEB_Suggestion ) || ! self::$instance ) {
 
 				self::$instance = new SIAEB_Suggestion();
+
+				self::$instance->loadTextDomain();
 
 				self::$instance->constants();
 				self::$instance->includes();
@@ -124,6 +125,21 @@ if ( ! class_exists( 'SIAEB_Suggestion' ) ) :
 			require_once SPT_INC_DIR . 'AssetsLoader.php';
 			require_once SPT_INC_DIR . 'Initializer.php';
 			require_once SPT_INC_DIR . 'Utility.php';
+		}
+
+		/**
+		 * Load plugin text domain, for localization
+		 *
+		 * @since 1.0
+		 * @access private
+		 * @return void
+		 */
+		private function loadTextDomain() {
+			$locale = get_locale();
+			$mo = 'wp-suggestion-' . $locale . '.mo';
+			load_textdomain( 'siaeb-suggestion', WP_LANG_DIR . '/wp-suggestion/' . $mo );
+			load_textdomain( 'siaeb-suggestion', plugin_dir_path( __FILE__ ) . 'languages/' . $mo );
+			load_plugin_textdomain( 'siaeb-suggestion' );
 		}
 
 	}
